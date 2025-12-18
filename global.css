@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(37, 37, 37);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    width: 855px;
+    max-width: 100%;
+    margin: 20px auto; /* Центрируем .home и отступ сверху */
+    text-align: center;
+}
+
+.logo {
+    position: fixed; /* или absolute в зависимости от нужного поведения */
+    top: 20px;
+    left: 20px;
+    width: 140px; /* Настройте размер по необходимости */
+    height: auto;
+    z-index: 1000; /* Чтобы было поверх других элементов */
+}
+
+.track {
+    padding: 1px;
+    border-bottom: 15px;
+    color: #ccc;
+    font-size: 17px;
+    left: 15px;
+    width: 100%; /* Треки на весь экран */
+    box-sizing: border-box;
+}
+
+audio {
+    width: 100%;
+    margin-top: 5px;
+    filter: invert(0.9);
+}
+
+/* Адаптивность только для .home */
+@media screen and (max-width: 800px) {
+    .home {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
