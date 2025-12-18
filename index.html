@@ -3,14 +3,18 @@
 <head>
     <link rel="stylesheet" href="global.css">
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="src/img/mini_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>frfy Music</title>
 </head>
 <body>
-
-<!-- Экран загрузки -->
 <div id="loading-screen">
     <img src="src/img/logo.png" alt="" class="loading-text">
+</div>
+
+<!-- Поисковик в правом верхнем углу -->
+<div class="search-container">
+    <input type="text" id="trackSearch" placeholder="Поиск треков...">
 </div>
 
 <div class="logo">
@@ -22,20 +26,33 @@
 </div>
   
 <div class="playlist">
-    <div class="track">machine · auratoshi<br><audio controls><source src="src/shine.mp3" type="audio/mpeg"></audio></div>
-    <div class="track">Song · Artist<br><audio controls><source src="track.mp3" type="audio/mpeg"></audio></div>
-    <div class="track">Song · Artist<br><audio controls><source src="track.mp3" type="audio/mpeg"></audio></div>
+    <div class="track" data-keywords="machine auratoshi">machine · auratoshi<br><audio controls><source src="src/shine.mp3" type="audio/mpeg"></audio></div>
+    <div class="track" data-keywords="попал tewiq">попал · tewiq<br><audio controls><source src="src/popal.mp3" type="audio/mpeg"></audio></div>
+    <div class="track" data-keywords="Бабки whitek3d">Бабки · whitek3d<br><audio controls><source src="src/babki.mp3" type="audio/mpeg"></audio></div>
+    <div class="track" data-keywords="дырки в штанах madk1d">дырки в штанах · madk1d<br><audio controls><source src="src/dirka.mp3" type="audio/mpeg"></audio></div>
 </div>
 
-
-
 <script>
-// Плавно скрываем экран загрузки через 1.5 секунды
 setTimeout(function() {
     var loadingScreen = document.getElementById('loading-screen');
     loadingScreen.style.opacity = '0';
     loadingScreen.style.visibility = 'hidden';
 }, 1100);
+
+// Функция поиска
+document.getElementById('trackSearch').addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase().trim();
+    const tracks = document.querySelectorAll('.track');
+    
+    tracks.forEach(track => {
+        const keywords = track.getAttribute('data-keywords').toLowerCase();
+        if (keywords.includes(searchTerm) || searchTerm === '') {
+            track.style.display = 'block';
+        } else {
+            track.style.display = 'none';
+        }
+    });
+});
 </script>
 
 </body>

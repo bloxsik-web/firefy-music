@@ -45,6 +45,34 @@ body {
     z-index: 1000;
 }
 
+
+.search-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#trackSearch {
+    padding: 8px 12px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: rgb(50, 50, 50);
+    color: #ccc;
+    font-size: 14px;
+    width: 200px;
+    height: 13px;
+    outline: none;
+}
+
+#trackSearch::placeholder {
+    color: #888;
+}
+
+#trackSearch:focus {
+    border-color: #777;
+}
+
 .track {
     padding: 1px;
     border-bottom: 15px;
