@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(37, 37, 37);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: block;
+}
+
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 140px;
+    height: auto;
+    z-index: 1000;
+}
+
+.home {
+    width: 855px;
+    max-width: 90%;
+    margin: 100px auto 40px auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.join {
+    width: 355px;
+    max-width: 85%;
+    text-align: center;
+    margin: -130px auto 30px auto;
+    position: relative;
+    top: -55px;
+    z-index: 2;
+}
+
+.plus, .minus {
+    width: 355px;
+    max-width: 85%;
+    text-align: left;
+    margin: 0 0 30px 0;
+}
+
+.join img, .plus img, .minus img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.home img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 100px;
+        top: 15px;
+        left: 15px;
+    }
+    
+    .home {
+        margin-top: 80px;
+        max-width: 95%;
+    }
+    
+    .join, .plus, .minus {
+        width: 300px;
+    }
+    
+    .join {
+        margin: -80px auto 30px auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 80px;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .home {
+        margin-top: 60px;
+        max-width: 98%;
+    }
+    
+    .join, .plus, .minus {
+        width: 280px;
+    }
+    
+    .join {
+        margin: -50px auto 30px auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
