@@ -12,7 +12,6 @@
     <img src="src/img/logo.png" alt="" class="loading-text">
 </div>
 
-<!-- Поисковик в правом верхнем углу -->
 <div class="search-container">
     <input type="text" id="trackSearch" placeholder="Поиск треков...">
 </div>
@@ -25,7 +24,7 @@
    <img src="src/img/frfy.png" alt="" class="home">
 </div>
   
-<div class="playlist">
+<div class="playlist" id="playlist">
     <div class="track" data-keywords="machine auratoshi">machine · auratoshi<br><audio controls><source src="src/shine.mp3" type="audio/mpeg"></audio></div>
     <div class="track" data-keywords="попал tewiq">попал · tewiq<br><audio controls><source src="src/popal.mp3" type="audio/mpeg"></audio></div>
     <div class="track" data-keywords="Бабки whitek3d">Бабки · whitek3d<br><audio controls><source src="src/babki.mp3" type="audio/mpeg"></audio></div>
@@ -37,35 +36,111 @@
     <div class="track" data-keywords="alaska puffer аляска куртка аляска аляска аоаска пуфер паранойя">ALASKA PUFFER · паранойя<br><audio controls><source src="src/alaska.mp3" type="audio/mpeg"></audio></div>
     <div class="track" data-keywords="shalawa шалава туборошо tuborosho">shalawa · tuborosho<br><audio controls><source src="src/shalawa.mp3" type="audio/mpeg"></audio></div>
     <div class="track" data-keywords="интерпол interpol tuborosho туборошо">interpol · tuborosho<br><audio controls><source src="src/interpol.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="track" data-keywords="web 2.0 веб 2.0 темный принц">web 2.0 · темный принц<br><audio controls><source src="src/web2.mp3" type="audio/mpeg"></audio></div>
+    <div class="track" data-keywords="сайт раковая выхухоль">сайт · раковая выхухоль<br><audio controls><source src="src/sait.mp3" type="audio/mpeg"></audio></div>
+    <div class="track" data-keywords="страшный сон 2 раковая выхухоль">страшный сон 2 · раковая выхухоль<br><audio controls><source src="src/interpol.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="track" data-keywords="солана флиппер solanafliper темный принц">solanafliper · темный принц<br><audio controls><source src="src/solanaflipper.mp3" type="audio/mpeg"></audio></div>
+    <div class="track" data-keywords="автозаправка темный принц">автозаправка · темный принц<br><audio controls><source src="src/zapravka.mp3" type="audio/mpeg"></audio></div>
+    <div class="track" data-keywords="double door nyan.mp3">double door · nyan.mp3<br><audio controls><source src="src/door.mp3" type="audio/mpeg"></audio></div>
+
+    <div class="track" data-keywords="вирус cupsize">вирус · cupsize<br><audio controls><source src="src/virus.mp3" type="audio/mpeg"></audio></div>
 </div>
 
+<h4 class="copyright">frfy Solutions 2025</h4>
+
+<h5 class="working">
+  <a href="job.html" class="clickable-link">
+    Хочешь работать у нас? <span class="highlight">Нажми сюда</span>
+  </a>
+</h5>
+
 <script>
-setTimeout(function() {
-    var loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.style.opacity = '0';
-    loadingScreen.style.visibility = 'hidden';
-}, 1100);
+// Глобальная переменная для хранения текущей громкости
+let globalVolume = 0.5; // 50% по умолчанию
 
-console.log(
-  "%cСТОП!",
-  "color: #ff0000; font-size: 38px; font-weight: bold;"
-);
-console.log("Если вас попросили скопировать/вставить что-то сюда то вы жертва мошенников");
-console.log("Если вы знаете что делаете продолжайте на свой страх и риск")
-console.log(
-  "%cСТОП!",
-  "color: #ff0000; font-size: 38px; font-weight: bold;"
-);
-console.log("Если вас попросили скопировать/вставить что-то сюда то вы жертва мошенников");
-console.log("Если вы знаете что делаете продолжайте на свой страх и риск")
-console.log(
-  "%cСТОП!",
-  "color: #ff0000; font-size: 38px; font-weight: bold;"
-);
-console.log("Если вас попросили скопировать/вставить что-то сюда то вы жертва мошенников");
-console.log("Если вы знаете что делаете продолжайте на свой страх и риск")
+// Загружаем сохранённую громкость из localStorage
+function loadSavedVolume() {
+    const savedVolume = localStorage.getItem('audioVolume');
+    if (savedVolume !== null) {
+        globalVolume = parseFloat(savedVolume);
+    }
+    return globalVolume;
+}
 
-// Функция поиска
+// Сохраняем громкость в localStorage
+function saveVolume(volume) {
+    localStorage.setItem('audioVolume', volume);
+    globalVolume = volume;
+}
+
+// Функция синхронизации громкости всех аудиоплееров
+function syncAllVolumes(volume) {
+    const audioElements = document.querySelectorAll('audio');
+    audioElements.forEach(audio => {
+        audio.volume = volume;
+    });
+}
+
+// Обработчик изменения громкости
+function handleVolumeChange(e) {
+    const newVolume = e.target.volume;
+    saveVolume(newVolume);
+    syncAllVolumes(newVolume);
+}
+
+// Инициализация всех аудиоплееров
+function initializeAudioPlayers() {
+    const audioElements = document.querySelectorAll('audio');
+    const tracks = document.querySelectorAll('.track');
+    
+    // Загружаем сохранённую громкость
+    const currentVolume = loadSavedVolume();
+    
+    // Устанавливаем громкость для всех плееров
+    audioElements.forEach(audio => {
+        audio.volume = currentVolume;
+        
+        // Добавляем обработчик изменения громкости
+        audio.addEventListener('volumechange', handleVolumeChange);
+        
+        // Автопереход к следующему треку
+        audio.addEventListener('ended', function() {
+            const currentTrack = this.closest('.track');
+            const allVisibleTracks = Array.from(tracks).filter(track => 
+                track.style.display !== 'none'
+            );
+            
+            const currentIndex = allVisibleTracks.indexOf(currentTrack);
+            
+            if (currentIndex < allVisibleTracks.length - 1) {
+                // Останавливаем текущий трек
+                this.pause();
+                
+                // Находим следующий видимый трек
+                const nextTrack = allVisibleTracks[currentIndex + 1];
+                const nextAudio = nextTrack.querySelector('audio');
+                
+                // Прокручиваем к следующему треку
+                nextTrack.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest' 
+                });
+                
+                // Воспроизводим следующий трек
+                setTimeout(() => {
+                    nextAudio.play();
+                }, 300);
+            }
+        });
+    });
+    
+    // Синхронизируем громкость
+    syncAllVolumes(currentVolume);
+}
+
+// Поиск треков
 document.getElementById('trackSearch').addEventListener('input', function(e) {
     const searchTerm = e.target.value.toLowerCase().trim();
     const tracks = document.querySelectorAll('.track');
@@ -75,10 +150,71 @@ document.getElementById('trackSearch').addEventListener('input', function(e) {
         if (keywords.includes(searchTerm) || searchTerm === '') {
             track.style.display = 'block';
         } else {
+            // Если скрываем текущий играющий трек, останавливаем его
+            const audio = track.querySelector('audio');
+            if (!audio.paused) {
+                audio.pause();
+            }
             track.style.display = 'none';
         }
     });
 });
+
+// Загрузка экрана
+setTimeout(function() {
+    var loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.opacity = '0';
+    loadingScreen.style.visibility = 'hidden';
+    
+    // Инициализируем аудиоплееры после загрузки
+    initializeAudioPlayers();
+}, 1100);
+
+// Обработчик для новых аудио элементов (если они будут добавлены динамически)
+function observeAudioChanges() {
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeName === 'AUDIO' || (node.querySelector && node.querySelector('audio'))) {
+                        const audioElements = node.nodeName === 'AUDIO' ? [node] : node.querySelectorAll('audio');
+                        audioElements.forEach(audio => {
+                            audio.volume = globalVolume;
+                            audio.addEventListener('volumechange', handleVolumeChange);
+                        });
+                    }
+                });
+            }
+        });
+    });
+    
+    observer.observe(document.body, { 
+        childList: true, 
+        subtree: true 
+    });
+}
+
+// Запускаем наблюдение за изменениями DOM
+observeAudioChanges();
+
+console.log(
+  "%cСТОП!",
+  "color: #ff0000; font-size: 38px; font-weight: bold;"
+);
+console.log("Если вас попросили скопировать/вставить что-то сюда то вы жертва мошенников");
+console.log("Если вы знаете что делаете продолжайте на свой страх и риск")
+console.log(
+  "%cСТОП!",
+  "color: #ff0000; font-size: 38px; font-weight: bold;"
+);
+console.log("Если вас попросили скопировать/вставить что-то сюда то вы жертва мошенников");
+console.log("Если вы знаете что делаете продолжайте на свой страх и риск")
+console.log(
+  "%cСТОП!",
+  "color: #ff0000; font-size: 38px; font-weight: bold;"
+);
+console.log("Если вас попросили скопировать/вставить что-то сюда то вы жертва мошенников");
+console.log("Если вы знаете что делаете продолжайте на свой страх и риск")
 </script>
 
 </body>
