@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="global.css">
+    
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="src/img/mini_logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frfy Music</title>
+</head>
+<body>
+<div id="loading-screen">
+    <img src="src/img/logo.png" alt="" class="loading-text">
+</div>
+
+<div class="search-container">
+    <input type="text" id="trackSearch" placeholder="Поиск треков...">
+</div>
+
+<div class="logo">
+   <img src="src/img/logo.png" alt="" class="logo">
+</div>
+
+<!-- Реалистичная гирлянда -->
+<div id="realistic-garland">
+    <div class="rg-wire"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-light"></div>
+    <div class="rg-drop"></div>
+    <div class="rg-drop"></div>
+    <div class="rg-drop"></div>
+    <div class="rg-drop"></div>
+    <div class="rg-drop"></div>
+</div>
+
+<div class="home">
+   <img src="src/img/frfy.png" alt="" class="home">
+</div>
+  
+<div class="playlist" id="playlist">
+<div class="track" data-keywords="тупой Тупой Юпи юпи">Тупой · Юпи<br><audio controls><source src="mpsrc/Юпи - Тупой.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Обои Locked23">Обои · Locked23<br><audio controls><source src="mpsrc/Locked23 - Обои.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="sv moscow королевский XVII">sv moscow · королевский XVII<br><audio controls><source src="mpsrc/королевский XVII - sv moscow.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="pron queen 24mirai">pron queen · 24mirai<br><audio controls><source src="mpsrc/24mirai - pron queen.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="паспортные данные голодный">паспортные данные · голодный<br><audio controls><source src="mpsrc/голодный - паспортные данные.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="lana 2kizz">lana · 2kizz<br><audio controls><source src="mpsrc/2kizz - lana.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="1000 птиц coldn1ght">1000 птиц · coldn1ght<br><audio controls><source src="mpsrc/coldn1ght - 1000 птиц.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="ALASKA PUFFER 2 паранойя">ALASKA PUFFER 2 · паранойя<br><audio controls><source src="mpsrc/паранойя - ALASKA PUFFER 2.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="мудаком lightprey">мудаком · lightprey<br><audio controls><source src="mpsrc/lightprey - мудаком.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="хороший бассейн Поларойд">хороший бассейн · Поларойд<br><audio controls><source src="mpsrc/Поларойд - хороший бассейн.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="На телефон archangel20098">На телефон · archangel20098<br><audio controls><source src="mpsrc/archangel20098 - На телефон.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="silver ghasaii">silver · ghasaii<br><audio controls><source src="mpsrc/ghasaii - silver (Prod. by coralean).mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="слышу алгоритм">слышу · алгоритм<br><audio controls><source src="mpsrc/алгоритм - слышу.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Что ей снится hearme">Что ей снится · hearme<br><audio controls><source src="mpsrc/hearme - Что ей снится.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="bitch i wanna kms XD satuko">bitch i wanna kms XD · satuko<br><audio controls><source src="mpsrc/satuko - bitch i wanna kms XD.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="prime BLAZER 993">prime · BLAZER 993<br><audio controls><source src="mpsrc/BLAZER 993 - prime.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="кек LOLIWZ">кек · LOLIWZ<br><audio controls><source src="mpsrc/LOLIWZ - кек.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="в аду Финнкун">в аду · Финнкун<br><audio controls><source src="mpsrc/Финнкун - в аду.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Серфинг Реальности Юпи">Серфинг Реальности · Юпи<br><audio controls><source src="mpsrc/Юпи - Серфинг Реальности.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="adidas 666 akkiemi">adidas 666 · akkiemi<br><audio controls><source src="mpsrc/akkiemi - adidas 666.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="bastard auratoshi">bastard · auratoshi<br><audio controls><source src="mpsrc/auratoshi - bastard.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="mastercard & visa whitek3d">mastercard & visa · whitek3d<br><audio controls><source src="mpsrc/whitek3d - mastercard & visa.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="specialsadism voidvoice717">specialsadism · voidvoice717<br><audio controls><source src="mpsrc/voidvoice717 - specialsadism.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="нарратор lafkrat">нарратор · lafkrat<br><audio controls><source src="mpsrc/lafkrat - нарратор.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Cupid Sauzz">Cupid · Sauzz<br><audio controls><source src="mpsrc/Sauzz - Cupid (prod. by gufani244).mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="дырки в штанах madk1d">дырки в штанах · madk1d<br><audio controls><source src="mpsrc/madk1d - дырки в штанах.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Первое свидание индозер">Первое свидание · индозер<br><audio controls><source src="mpsrc/индозер - Первое свидание.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Вредные привычки Endlessly">Вредные привычки · Endlessly<br><audio controls><source src="mpsrc/Endlessly - Вредные привычки.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Напополам Locked23">Напополам · Locked23<br><audio controls><source src="mpsrc/Locked23 - Напополам.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="ТикТок Mark Siemens">ТикТок · Mark Siemens<br><audio controls><source src="mpsrc/Mark Siemens - ТикТок.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Вынос tuborosho">Вынос · tuborosho<br><audio controls><source src="mpsrc/tuborosho - Вынос.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Укулеле luvdakash">Укулеле · luvdakash<br><audio controls><source src="mpsrc/luvdakash - Укулеле.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Pirate auratoshi">Pirate · auratoshi<br><audio controls><source src="mpsrc/auratoshi - Pirate.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="000 thousand times 3umph">000 thousand times · 3umph<br><audio controls><source src="mpsrc/3umph - 000 thousand times.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Selection Reallowly Pluto">Selection · Reallowly Pluto<br><audio controls><source src="mpsrc/Reallowly Pluto - Selection.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="в танце LXNER">в танце · LXNER<br><audio controls><source src="mpsrc/LXNER - в танце.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Бабки lightprey">Бабки · lightprey<br><audio controls><source src="mpsrc/lightprey - Бабки.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="я истекаю кровью урал гайсин">я истекаю кровью · урал гайсин<br><audio controls><source src="mpsrc/урал гайсин - я истекаю кровью.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="chrom3 metaego">chrom3 · metaego<br><audio controls><source src="mpsrc/metaego - chrom3.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="im not flexing, im just bad satuko">im not flexing, im just bad · satuko<br><audio controls><source src="mpsrc/satuko - im not flexing, im just bad.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="убитым kurokov">убитым · kurokov<br><audio controls><source src="mpsrc/kurokov - убитым.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Не пишут whitek3d">Не пишут · whitek3d<br><audio controls><source src="mpsrc/whitek3d - Не пишут.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="stalker me tonight BLAZER 993">stalker me tonight · BLAZER 993<br><audio controls><source src="mpsrc/BLAZER 993 - stalker me tonight.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="выкинь whoisnewell">выкинь · whoisnewell<br><audio controls><source src="mpsrc/whoisnewell - выкинь.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Связаны nedum4y0u">Связаны · nedum4y0u<br><audio controls><source src="mpsrc/nedum4y0u - Связаны.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="холод voidvoice717">холод · voidvoice717<br><audio controls><source src="mpsrc/voidvoice717 - холод.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="большие купюры DOFIN">большие купюры · DOFIN<br><audio controls><source src="mpsrc/DOFIN - большие купюры.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="MARTINE ROSE madk1d">MARTINE ROSE · madk1d<br><audio controls><source src="mpsrc/madk1d - MARTINE ROSE.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="REDBULL WINGZ euro91">REDBULL WINGZ · euro91<br><audio controls><source src="mpsrc/euro91 - REDBULL WINGZ.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Вайти на Тайпе whitek3d">Вайти на Тайпе · whitek3d<br><audio controls><source src="mpsrc/whitek3d - Вайти на Тайпе.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="чары парапустяков">чары · парапустяков<br><audio controls><source src="mpsrc/парапустяков - чары.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="тело alicecrime">тело · alicecrime<br><audio controls><source src="mpsrc/alicecrime - тело.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Standoff 2 music HAESHKA">Standoff 2 music · HAESHKA<br><audio controls><source src="mpsrc/HAESHKA - Standoff 2 music.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="меня пугают мотви">меня пугают · мотви<br><audio controls><source src="mpsrc/мотви - меня пугают.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="прохладно 667plugg">прохладно · 667plugg<br><audio controls><source src="mpsrc/667plugg - прохладно.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="arbalet enveel">arbalet · enveel<br><audio controls><source src="mpsrc/enveel - arbalet.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="ВИЖУ Jelato">ВИЖУ · Jelato<br><audio controls><source src="mpsrc/Jelato - ВИЖУ.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="помурчи пж ashleytears">помурчи пж · ashleytears<br><audio controls><source src="mpsrc/ashleytears - помурчи пж.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="В Американских Шмотках! morphineee">В Американских Шмотках! · morphineee<br><audio controls><source src="mpsrc/morphineee - В Американских Шмотках!.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="не хватает vanchss">не хватает · vanchss<br><audio controls><source src="mpsrc/vanchss - не хватает.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="не нужно KERASINN">не нужно · KERASINN<br><audio controls><source src="mpsrc/KERASINN - не нужно.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Hermes Kelly lightprey">Hermes Kelly · lightprey<br><audio controls><source src="mpsrc/lightprey - Hermes Kelly.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="засыпаю DOFIN">засыпаю · DOFIN<br><audio controls><source src="mpsrc/DOFIN - засыпаю.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Псих gothicadeath">Псих · gothicadeath<br><audio controls><source src="mpsrc/gothicadeath - Псих.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="вооружен молодой рубль">вооружен · молодой рубль<br><audio controls><source src="mpsrc/молодой рубль - вооружен.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="MOOD 2 deyezaxo">MOOD 2 · deyezaxo<br><audio controls><source src="mpsrc/deyezaxo - MOOD 2.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Jaded London COLDAH">Jaded London · COLDAH<br><audio controls><source src="mpsrc/COLDAH - Jaded London.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Пули Locked23">Пули · Locked23<br><audio controls><source src="mpsrc/Locked23 - Пули.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Doping 2.0 whitek3d">Doping 2.0 · whitek3d<br><audio controls><source src="mpsrc/whitek3d - Doping 2.0.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Не врубаюсь паранойя">Не врубаюсь · паранойя<br><audio controls><source src="mpsrc/паранойя - Не врубаюсь.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="god is a weapon x hoodtrap DEPHCORE">god is a weapon x hoodtrap · DEPHCORE<br><audio controls><source src="mpsrc/DEPHCORE - god is a weapon x hoodtrap.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="сожри 7nx">сожри · 7nx<br><audio controls><source src="mpsrc/7nx - сожри prod. by avt6stop1mprod.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="limuzini & pachki пинк">limuzini & pachki · пинк<br><audio controls><source src="mpsrc/пинк - limuzini & pachki.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="придурки kurokov">придурки · kurokov<br><audio controls><source src="mpsrc/kurokov - придурки.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="тупая мотви">тупая · мотви<br><audio controls><source src="mpsrc/мотви - тупая.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="зеленый звук deathlain">зеленый звук · deathlain<br><audio controls><source src="mpsrc/deathlain - зеленый звук.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="в октябре m3d">в октябре · m3d<br><audio controls><source src="mpsrc/m3d - в октябре.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="шрамы nowaw3">шрамы · nowaw3<br><audio controls><source src="mpsrc/nowaw3 - шрамы.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Синоним Победы sk33zy">Синоним Победы · sk33zy<br><audio controls><source src="mpsrc/sk33zy - Синоним Победы.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="чокер 2kizz">чокер · 2kizz<br><audio controls><source src="mpsrc/2kizz - чокер.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Не тебя 17tess">Не тебя · 17tess<br><audio controls><source src="mpsrc/17tess - Не тебя.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="flirt KUDOKUSHI">flirt · KUDOKUSHI<br><audio controls><source src="mpsrc/KUDOKUSHI - flirt.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="JIGGA JUICE luvdakash">JIGGA JUICE · luvdakash<br><audio controls><source src="mpsrc/luvdakash - JIGGA JUICE.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Интерес mentay">Интерес · mentay<br><audio controls><source src="mpsrc/mentay - Интерес.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="не придёт домой dope17">не придёт домой · dope17<br><audio controls><source src="mpsrc/dope17 - не придёт домой.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="OBRAZ ZHIZNI FORTUNA 812">OBRAZ ZHIZNI · FORTUNA 812<br><audio controls><source src="mpsrc/FORTUNA 812 - OBRAZ ZHIZNI.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="rory rizza">rory · rizza<br><audio controls><source src="mpsrc/rizza - rory.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="герой первыйкороль">герой · первыйкороль<br><audio controls><source src="mpsrc/первыйкороль - герой.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="октябрь мистер модератор">октябрь · мистер модератор<br><audio controls><source src="mpsrc/мистер модератор - октябрь.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="хитрая лиса enveel">хитрая лиса · enveel<br><audio controls><source src="mpsrc/enveel - хитрая лиса.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="iба чотко ICYAURA">iба чотко · ICYAURA<br><audio controls><source src="mpsrc/ICYAURA - iба чотко.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="ублюдком BLAZER 993">ублюдком · BLAZER 993<br><audio controls><source src="mpsrc/BLAZER 993 - ублюдком.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="geek bbykidlouis">geek · bbykidlouis<br><audio controls><source src="mpsrc/bbykidlouis - geek.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="emo star cardinparis">emo star · cardinparis<br><audio controls><source src="mpsrc/cardinparis - emo star.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="тень призрак крови">тень · призрак крови<br><audio controls><source src="mpsrc/призрак крови - тень.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Не хочу шивери">Не хочу · шивери<br><audio controls><source src="mpsrc/шивери - Не хочу.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="психотерапевты -) 24mirai">психотерапевты -) · 24mirai<br><audio controls><source src="mpsrc/24mirai - психотерапевты -).mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="nikon lafkrat">nikon · lafkrat<br><audio controls><source src="mpsrc/lafkrat - nikon.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="ЗА РУЛЁМ LIL KRIN">ЗА РУЛЁМ · LIL KRIN<br><audio controls><source src="mpsrc/LIL KRIN - ЗА РУЛЁМ.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Боль Moon Ocean">Боль · Moon Ocean<br><audio controls><source src="mpsrc/Moon Ocean - Боль.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="ватсапп Экзотик">ватсапп · Экзотик<br><audio controls><source src="mpsrc/Экзотик - ватсапп.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="LUV Measora">LUV · Measora<br><audio controls><source src="mpsrc/Measora - LUV.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="попал tewiq">попал · tewiq<br><audio controls><source src="mpsrc/tewiq - попал.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Цвет настроения mentay">Цвет настроения · mentay<br><audio controls><source src="mpsrc/mentay - Цвет настроения.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="просто попробуем ivycraft">просто попробуем · ivycraft<br><audio controls><source src="mpsrc/ivycraft - просто попробуем.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="кошмары lightprey">кошмары · lightprey<br><audio controls><source src="mpsrc/lightprey - кошмары.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="знаю whoisnewell">знаю · whoisnewell<br><audio controls><source src="mpsrc/whoisnewell - знаю.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="ЛОУРАЙДЕР олег кавказ">ЛОУРАЙДЕР · олег кавказ<br><audio controls><source src="mpsrc/олег кавказ - ЛОУРАЙДЕР.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="Открой мне дверь GUZAR">Открой мне дверь · GUZAR<br><audio controls><source src="mpsrc/GUZAR - Открой мне дверь.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="memory Гидра">memory · Гидра<br><audio controls><source src="mpsrc/Гидра - memory.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="моя мини принцесса урал гайсин">моя мини принцесса · урал гайсин<br><audio controls><source src="mpsrc/урал гайсин - моя мини принцесса.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="The Witcher формула">The Witcher · формула<br><audio controls><source src="mpsrc/формула - The Witcher.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="холод филмайфейс">холод · филмайфейс<br><audio controls><source src="mpsrc/филмайфейс - холод.mp3" type="audio/mpeg"></audio></div>
+<div class="track" data-keywords="snakelike DEPHCORE">snakelike · DEPHCORE<br><audio controls><source src="mpsrc/DEPHCORE - snakelike.mp3" type="audio/mpeg"></audio></div>
+</div>
+
+<h4 class="copyright">frfy Solutions 2025</h4>
+
+<h5 class="working">
+  <a href="job.html" class="clickable-link">
+    Хочешь работать у нас? <span class="highlight">Нажми сюда</span>
+  </a>
+</h5>
+
+<!-- Снег на чистом CSS -->
+<div class="snow-container">
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+</div>
+
+<script>
+// Глобальная переменная для хранения текущей громкости
+let globalVolume = 0.5; // 50% по умолчанию
+
+// Конфигурация эффектов перехода
+const TRANSITION_CONFIG = {
+    fadeDuration: 1000, // Длительность эффекта затухания в миллисекундах (1 секунда)
+    fadeSteps: 20,      // Количество шагов для плавности
+    pauseBeforeNext: 100 // Пауза перед началом следующего трека
+};
+
+
+
+// Загружаем сохранённую громкость из localStorage
+function loadSavedVolume() {
+    const savedVolume = localStorage.getItem('audioVolume');
+    if (savedVolume !== null) {
+        globalVolume = parseFloat(savedVolume);
+    }
+    return globalVolume;
+}
+
+// Сохраняем громкость в localStorage
+function saveVolume(volume) {
+    localStorage.setItem('audioVolume', volume);
+    globalVolume = volume;
+}
+
+// Функция синхронизации громкости всех аудиоплееров
+function syncAllVolumes(volume) {
+    const audioElements = document.querySelectorAll('audio');
+    audioElements.forEach(audio => {
+        // Не применяем к трекам, которые в процессе fade-out
+        if (!audio.dataset.isFading) {
+            audio.volume = volume;
+        }
+    });
+}
+
+// Обработчик изменения громкости
+function handleVolumeChange(e) {
+    const newVolume = e.target.volume;
+    saveVolume(newVolume);
+    syncAllVolumes(newVolume);
+}
+
+// Функция плавного затухания аудио (fade-out)
+async function fadeOutAudio(audioElement) {
+    return new Promise((resolve) => {
+        if (!audioElement || audioElement.paused) {
+            resolve();
+            return;
+        }
+        
+        const startVolume = audioElement.volume;
+        const stepTime = TRANSITION_CONFIG.fadeDuration / TRANSITION_CONFIG.fadeSteps;
+        const stepChange = startVolume / TRANSITION_CONFIG.fadeSteps;
+        
+        // Помечаем, что трек в процессе fade-out
+        audioElement.dataset.isFading = 'true';
+        
+        let currentStep = 0;
+        
+        const fadeInterval = setInterval(() => {
+            currentStep++;
+            const newVolume = Math.max(0, startVolume - (stepChange * currentStep));
+            audioElement.volume = newVolume;
+            
+            if (currentStep >= TRANSITION_CONFIG.fadeSteps || newVolume <= 0) {
+                clearInterval(fadeInterval);
+                audioElement.pause();
+                audioElement.volume = startVolume; // Восстанавливаем оригинальную громкость
+                delete audioElement.dataset.isFading;
+                resolve();
+            }
+        }, stepTime);
+    });
+}
+
+// Функция плавного появления аудио (fade-in)
+async function fadeInAudio(audioElement) {
+    return new Promise((resolve) => {
+        if (!audioElement) {
+            resolve();
+            return;
+        }
+        
+        const targetVolume = globalVolume;
+        const stepTime = TRANSITION_CONFIG.fadeDuration / TRANSITION_CONFIG.fadeSteps;
+        const stepChange = targetVolume / TRANSITION_CONFIG.fadeSteps;
+        
+        // Начинаем с нулевой громкости
+        audioElement.volume = 0;
+        
+        // Помечаем, что трек в процессе fade-in
+        audioElement.dataset.isFading = 'true';
+        
+        let currentStep = 0;
+        
+        // Воспроизводим аудио
+        audioElement.play().catch(e => {
+            console.error('Ошибка воспроизведения:', e);
+            delete audioElement.dataset.isFading;
+            resolve();
+        });
+        
+        const fadeInterval = setInterval(() => {
+            currentStep++;
+            const newVolume = Math.min(targetVolume, stepChange * currentStep);
+            audioElement.volume = newVolume;
+            
+            if (currentStep >= TRANSITION_CONFIG.fadeSteps || newVolume >= targetVolume) {
+                clearInterval(fadeInterval);
+                audioElement.volume = targetVolume; // Устанавливаем целевую громкость
+                delete audioElement.dataset.isFading;
+                resolve();
+            }
+        }, stepTime);
+    });
+}
+
+// Автопереход к следующему треку с эффектами
+async function transitionToNextTrack(currentAudio, currentTrack) {
+    const tracks = document.querySelectorAll('.track');
+    const allVisibleTracks = Array.from(tracks).filter(track => 
+        track.style.display !== 'none'
+    );
+    
+    const currentIndex = allVisibleTracks.indexOf(currentTrack);
+    
+    if (currentIndex < allVisibleTracks.length - 1) {
+        // Находим следующий видимый трек
+        const nextTrack = allVisibleTracks[currentIndex + 1];
+        const nextAudio = nextTrack.querySelector('audio');
+        
+        // Прокручиваем к следующему треку
+        nextTrack.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'nearest' 
+        });
+        
+        try {
+            // Эффект затухания текущего трека
+            await fadeOutAudio(currentAudio);
+            
+            // Короткая пауза
+            await new Promise(resolve => setTimeout(resolve, TRANSITION_CONFIG.pauseBeforeNext));
+            
+            // Эффект появления следующего трека
+            await fadeInAudio(nextAudio);
+            
+        } catch (error) {
+            console.error('Ошибка при переходе между треками:', error);
+            // В случае ошибки пытаемся просто запустить следующий трек
+            if (nextAudio) {
+                nextAudio.volume = globalVolume;
+                nextAudio.play().catch(e => console.error('Не удалось воспроизвести следующий трек:', e));
+            }
+        }
+    }
+}
+
+// Инициализация всех аудиоплееров
+function initializeAudioPlayers() {
+    const audioElements = document.querySelectorAll('audio');
+    const tracks = document.querySelectorAll('.track');
+    
+    // Загружаем сохранённую громкость
+    const currentVolume = loadSavedVolume();
+    
+    // Устанавливаем громкость для всех плееров
+    audioElements.forEach(audio => {
+        audio.volume = currentVolume;
+        
+        // Добавляем обработчик изменения громкости
+        audio.addEventListener('volumechange', handleVolumeChange);
+        
+        // Автопереход к следующему треку с эффектами
+        audio.addEventListener('ended', function() {
+            const currentTrack = this.closest('.track');
+            transitionToNextTrack(this, currentTrack);
+        });
+    });
+    
+    // Синхронизируем громкость
+    syncAllVolumes(currentVolume);
+}
+
+// Поиск треков
+document.getElementById('trackSearch').addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase().trim();
+    const tracks = document.querySelectorAll('.track');
+    
+    tracks.forEach(track => {
+        const keywords = track.getAttribute('data-keywords').toLowerCase();
+        if (keywords.includes(searchTerm) || searchTerm === '') {
+            track.style.display = 'block';
+        } else {
+            // Если скрываем текущий играющий трек, останавливаем его с эффектом
+            const audio = track.querySelector('audio');
+            if (!audio.paused) {
+                fadeOutAudio(audio).then(() => {
+                    track.style.display = 'none';
+                });
+            } else {
+                track.style.display = 'none';
+            }
+        }
+    });
+});
+
+// Загрузка экрана
+setTimeout(function() {
+    var loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.opacity = '0';
+    loadingScreen.style.visibility = 'hidden';
+    
+    // Инициализируем аудиоплееры после загрузки
+    initializeAudioPlayers();
+}, 1100);
+
+// Обработчик для новых аудио элементов (если они будут добавлены динамически)
+function observeAudioChanges() {
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeName === 'AUDIO' || (node.querySelector && node.querySelector('audio'))) {
+                        const audioElements = node.nodeName === 'AUDIO' ? [node] : node.querySelectorAll('audio');
+                        audioElements.forEach(audio => {
+                            audio.volume = globalVolume;
+                            audio.addEventListener('volumechange', handleVolumeChange);
+                            
+                            // Добавляем обработчик ended для новых элементов
+                            audio.addEventListener('ended', function() {
+                                const currentTrack = this.closest('.track');
+                                if (currentTrack) {
+                                    transitionToNextTrack(this, currentTrack);
+                                }
+                            });
+                        });
+                    }
+                });
+            }
+        });
+    });
+    
+    observer.observe(document.body, { 
+        childList: true, 
+        subtree: true 
+    });
+}
+
+// Дополнительная функция: плавная остановка всех треков
+function fadeOutAllAudio() {
+    const audioElements = document.querySelectorAll('audio');
+    const fadePromises = Array.from(audioElements)
+        .filter(audio => !audio.paused)
+        .map(audio => fadeOutAudio(audio));
+    
+    return Promise.all(fadePromises);
+}
+
+// Запускаем наблюдение за изменениями DOM
+observeAudioChanges();
+
+console.log(
+  "%cСТОП!",
+  "color: #ff0000; font-size: 38px; font-weight: bold;"
+);
+console.log("Если вас попросили скопировать/вставить что-то сюда то вы жертва мошенников");
+console.log("Если вы знаете что делаете продолжайте на свой страх и риск")
+console.log(
+  "%cСТОП!",
+  "color: #ff0000; font-size: 38px; font-weight: bold;"
+);
+console.log("Если вас попросили скопировать/вставить что-то сюда то вы жертва мошенников");
+console.log("Если вы знаете что делаете продолжайте на свой страх и риск")
+console.log(
+  "%cСТОП!",
+  "color: #ff0000; font-size: 38px; font-weight: bold;"
+);
+console.log("Если вас попросили скопировать/вставить что-то сюда то вы жертва мошенников");
+console.log("Если вы знаете что делаете продолжайте на свой страх и риск")
+
+
+
+</script>
+
+</body>
+</html>
